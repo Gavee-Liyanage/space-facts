@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        #fact {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fun Facts App</h1>
+    <div id="fact">Click the button to generate a fun fact!</div>
+    <button onclick="generateFact()">Get a Fun Fact!</button>
+
+    <script>
+        const facts = [
+            "Space is vast and possibly infinite.",
+            "Black holes are regions in space where gravity is so strong that nothing can escape.",
+            "A neutron star is incredibly dense; a sugar-cube-sized amount weighs as much as all of humanity.",
+            "The coldest known place in the universe is the Boomerang Nebula.",
+            "There are an estimated 2 trillion galaxies in the observable universe.",
+            "Time moves slower in stronger gravitational fields.",
+            "The Hercules-Corona Borealis Great Wall is the largest known structure in the universe.",
+            "There is a massive cloud of water vapor in space, containing 140 trillion times the amount of water in Earth's oceans.",
+            "In space, there is no atmosphere, so sound has no medium to travel through.",
+            "The Sun accounts for about 99.86% of the total mass of the Solar System."
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
